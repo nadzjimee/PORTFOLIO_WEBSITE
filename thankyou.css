@@ -1,0 +1,80 @@
+/* Styles specific to thank-you section */
+.thank-you {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    background: linear-gradient(135deg, #f5e6d3 0%, #fdece4 100%);
+    padding: 20px;
+}
+
+.thank-you .container {
+    max-width: 600px;
+    padding: 40px;
+    background-color: #ffffff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.thank-you .container:hover {
+    transform: scale(1.05); /* Slight scale-up on hover for effect */
+}
+
+.thank-you h1 {
+    font-size: 2.5em;
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-family: 'Georgia', serif; /* Elegant font choice */
+}
+
+.thank-you p {
+    font-size: 1.2em;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.thank-you strong {
+    font-weight: bold;
+    color: #444;
+}
+
+.back-home {
+    display: inline-block;
+    padding: 14px 35px;
+    background: #8b6126;
+    color: #ffeab4;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    font-weight: 600;
+}
+
+.back-home:hover {
+    background: #e3c79f;
+    color: #8b6126;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Optional animation for page elements */
+.thank-you .container {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

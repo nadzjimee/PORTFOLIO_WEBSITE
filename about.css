@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(to right, #f4e3ce, #e9d3b0);
+    color: #4b3621;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: #3b2c1b;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+}
+.logo {
+    font-size: 26px;
+    color: #f5e6d3;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px #3b2c1b;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #f5e6d3;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    position: relative;
+}
+
+.navbar a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background: #e3c79f;
+    transition: width 0.3s;
+}
+
+.navbar a:hover::after,
+.navbar a.active::after {
+    width: 100%;
+}
+
+/* Container Styling */
+.about {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 40px auto;
+    gap: 50px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Image Wrapper with Decorative Borders */
+.about-image {
+    position: relative;
+    width: 300px; /* Adjust based on image size */
+    height: 400px; /* Adjust based on image aspect ratio */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main Image */
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px; /* Rounded corners */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1;
+}
+
+/* Outer Solid Border */
+.about-image::before {
+    content: "";
+    position: absolute;
+    width: 95%;
+    height: 95%;
+    border: 3px solid #5a4330; /* Brown solid border */
+    border-radius: 30px; /* Matches image corners */
+    top: 2%;
+    left: 2%;
+    z-index: 0; /* Behind the image */
+}
+
+/* Inner Dashed Border */
+.about-image::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px dashed #af7e56; /* Warm gold dashed border */
+    border-radius: 40px;
+    top: -10px;
+    left: -10px;
+    z-index: -1; /* Behind everything */
+}
+
+/* About Content */
+.about-content {
+    max-width: 600px;
+    background-color: #fef9f1;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.about-content h1 {
+    color: #5a4330;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #5a4330;
+}
+
+
+.about-details {
+    margin-top: 30px;
+}
+
+.about-details p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #6d513d;
+    margin-bottom: 20px;
+}
+
+.about-details h2 {
+    font-size: 24px;
+    color: #9b7552;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+/* Buttons, Links Hover Effects */
+.about-content a, .navbar a {
+    transition: color 0.3s ease;
+}
+
+.about-content a:hover,
+.navbar a:hover {
+    color: #af7e56; /* Muted warm gold */
+}

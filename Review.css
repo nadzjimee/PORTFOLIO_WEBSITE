@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(45deg, #f4e3ce, #e9d3b0, #f0d6b2);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    color: #4b3621;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: #3b2c1b;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+    font-size: 26px;
+    color: #f5e6d3;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px #3b2c1b;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #f5e6d3;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    position: relative;
+}
+
+.navbar a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background: #e3c79f;
+    transition: width 0.3s;
+}
+
+.navbar a:hover::after,
+.navbar a.active::after {
+    width: 100%;
+}
+
+/* Review Section Styles */
+.reviews-section {
+    padding: 2.5rem;
+    background-color: #f0f3f5; /* Light gray background */
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.reviews-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #555;
+    letter-spacing: 1px;
+}
+
+/* Comment Form Styling */
+.review-form {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2.5rem;
+    transition: transform 0.3s ease;
+}
+
+.review-form:hover {
+    transform: scale(1.02);
+}
+
+.review-form h3 {
+    color: #8b5e34;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.review-form label {
+    display: block;
+    margin-top: 1.2rem;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.review-form input,
+.review-form select,
+.review-form textarea,
+.review-form button {
+    width: 100%;
+    padding: 0.8rem;
+    margin-top: 0.5rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.review-form button {
+    background-color: #8b5e34;
+    color: #f5e6d3;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.review-form button:hover {
+    background-color: #f5e6d3;
+    color: #8b5e34;
+    border: 2px solid #8b5e34;
+    box-shadow: none;
+    transform: scale(1.05);
+}
+
+/* Reviews Display Styling */
+.reviews-container {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.reviews-container:hover {
+    transform: scale(1.01);
+}
+
+/* Individual Review Styling */
+.review {
+    display: flex;
+    align-items: flex-start;
+    padding: 1rem 0;
+    border-bottom: 1px dashed #ddd;
+    transition: background-color 0.3s;
+}
+
+.review:hover {
+    background-color: #f7f9fb;
+}
+
+.profile-pic {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 1rem;
+    object-fit: cover;
+    background-color: #ddd;
+    transition: transform 0.3s;
+}
+
+.profile-pic:hover {
+    transform: scale(1.1);
+}
+
+.review-content {
+    flex: 1;
+}
+
+.username {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #333;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.rating {
+    color: #ffc107;
+    font-size: 1.2rem;
+    margin-top: 0.3rem;
+}
+
+.comment {
+    color: #555;
+    margin-top: 0.6rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .review-form input, .review-form select, .review-form textarea, .review-form button {
+        font-size: 0.9rem;
+    }
+
+    .reviews-section h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Delete Button Styling */
+.delete-button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.delete-button:hover {
+    background-color: #ff1a1a;
+    transform: scale(1.05);
+}
